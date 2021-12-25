@@ -1,0 +1,6 @@
+searchBox_Txt="xpath://div[@id='SearchBoxOld']//input"
+search_Btn="xpath://div[text()='ARA']"
+checkSearch_Lbl="//div[text()='Kategori']"
+searchBrand_Txt="xpath://div[@id='markalar']//input[@placeholder='Filtrele']"
+firstProduct_Lnk="xpath:(//div[contains(@class, 'ProductCard')]//a)[1]"
+colorLstOpen_Btn="//label[@for='collapse-renk']"

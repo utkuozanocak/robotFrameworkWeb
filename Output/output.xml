@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on darwin)" generated="20211225 20:57:11.283" rpa="false" schemaversion="2">
+<suite id="s1" name="testCase1" source="/Users/uocak/Desktop/fireflyCaseStudy/firefly-web/TestCases/testCase1.robot">
+<test id="s1-t1" name="Test Case 1">
+<kw name="Test Case Setup" library="baseTest" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.hepsiburada.com/</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${chrome_driver}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211225 20:57:11.684" level="INFO">Opening browser 'Chrome' to base url 'https://www.hepsiburada.com/'.</msg>
+<status status="PASS" starttime="20211225 20:57:11.683" endtime="20211225 20:57:20.735"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211225 20:57:20.735" endtime="20211225 20:57:21.092"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211225 20:57:21.092" endtime="20211225 20:57:21.094"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:11.683" endtime="20211225 20:57:21.094"/>
+</kw>
+<kw name="Search Product" library="homePageActions">
+<arg>bluetooth kulaklık</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchBox_Txt}</arg>
+<arg>${productName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:21.096" level="INFO">Typing text 'bluetooth kulaklık' into text field 'xpath://div[@id='SearchBoxOld']//input'.</msg>
+<status status="PASS" starttime="20211225 20:57:21.096" endtime="20211225 20:57:21.547"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:21.095" endtime="20211225 20:57:21.547"/>
+</kw>
+<kw name="Click Search Button" library="homePageActions">
+<kw name="Wait And Click" library="baseTest">
+<arg>${search_Btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:21.548" endtime="20211225 20:57:21.573"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:21.574" level="INFO">Clicking element 'xpath://div[text()='ARA']'.</msg>
+<status status="PASS" starttime="20211225 20:57:21.574" endtime="20211225 20:57:21.644"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:21.548" endtime="20211225 20:57:21.644"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:21.547" endtime="20211225 20:57:21.644"/>
+</kw>
+<kw name="Check Search Is Complete" library="homePageActions">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211225 20:57:24.646" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211225 20:57:21.644" endtime="20211225 20:57:24.646"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211225 20:57:24.646" endtime="20211225 20:57:24.909"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:25.059" level="INFO">Current page contains element '//div[text()='Kategori']'.</msg>
+<status status="PASS" starttime="20211225 20:57:24.910" endtime="20211225 20:57:25.059"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:21.644" endtime="20211225 20:57:25.059"/>
+</kw>
+<kw name="Search And Select Brand" library="homePageActions">
+<arg>JBL</arg>
+<arg>JBL</arg>
+<kw name="Check Search Is Complete" library="homePageActions">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211225 20:57:28.062" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211225 20:57:25.061" endtime="20211225 20:57:28.062"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211225 20:57:28.062" endtime="20211225 20:57:28.083"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:28.124" level="INFO">Current page contains element '//div[text()='Kategori']'.</msg>
+<status status="PASS" starttime="20211225 20:57:28.083" endtime="20211225 20:57:28.124"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:25.060" endtime="20211225 20:57:28.124"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchBrand_Txt}</arg>
+<arg>${brandName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:28.125" level="INFO">Typing text 'JBL' into text field 'xpath://div[@id='markalar']//input[@placeholder='Filtrele']'.</msg>
+<status status="PASS" starttime="20211225 20:57:28.124" endtime="20211225 20:57:28.370"/>
+</kw>
+<kw name="Wait And Click" library="baseTest">
+<arg>//div[text()='${selectBrand}']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:28.371" endtime="20211225 20:57:30.605"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:30.605" level="INFO">Clicking element '//div[text()='JBL']'.</msg>
+<status status="PASS" starttime="20211225 20:57:30.605" endtime="20211225 20:57:30.770"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:28.370" endtime="20211225 20:57:30.770"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:25.060" endtime="20211225 20:57:30.771"/>
+</kw>
+<kw name="Select Product Price" library="homePageActions">
+<arg>750 - 1000 TL</arg>
+<kw name="Check Search Is Complete" library="homePageActions">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211225 20:57:33.772" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211225 20:57:30.771" endtime="20211225 20:57:33.772"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211225 20:57:33.772" endtime="20211225 20:57:33.786"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:33.793" level="INFO">Current page contains element '//div[text()='Kategori']'.</msg>
+<status status="PASS" starttime="20211225 20:57:33.786" endtime="20211225 20:57:33.793"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:30.771" endtime="20211225 20:57:33.793"/>
+</kw>
+<kw name="Wait And Click" library="baseTest">
+<arg>//div[text()='${price}']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:33.793" endtime="20211225 20:57:33.813"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:33.813" level="INFO">Clicking element '//div[text()='750 - 1000 TL']'.</msg>
+<status status="PASS" starttime="20211225 20:57:33.813" endtime="20211225 20:57:33.964"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:33.793" endtime="20211225 20:57:33.964"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:30.771" endtime="20211225 20:57:33.964"/>
+</kw>
+<kw name="Select Product Color" library="homePageActions">
+<arg>Siyah</arg>
+<kw name="Check Search Is Complete" library="homePageActions">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211225 20:57:36.967" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211225 20:57:33.965" endtime="20211225 20:57:36.967"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211225 20:57:36.968" endtime="20211225 20:57:36.980"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${checkSearch_Lbl}</arg>
+<arg>timeout=30</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:36.986" level="INFO">Current page contains element '//div[text()='Kategori']'.</msg>
+<status status="PASS" starttime="20211225 20:57:36.980" endtime="20211225 20:57:36.986"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:33.965" endtime="20211225 20:57:36.986"/>
+</kw>
+<kw name="Wait And Click" library="baseTest">
+<arg>${colorLstOpen_Btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:36.987" endtime="20211225 20:57:37.004"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:37.004" level="INFO">Clicking element '//label[@for='collapse-renk']'.</msg>
+<status status="PASS" starttime="20211225 20:57:37.004" endtime="20211225 20:57:37.060"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:36.986" endtime="20211225 20:57:37.060"/>
+</kw>
+<kw name="Wait And Click" library="baseTest">
+<arg>//div[text()='${color}']</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:37.061" endtime="20211225 20:57:37.112"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:37.112" level="INFO">Clicking element '//div[text()='Siyah']'.</msg>
+<status status="PASS" starttime="20211225 20:57:37.112" endtime="20211225 20:57:37.289"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:37.060" endtime="20211225 20:57:37.289"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:33.964" endtime="20211225 20:57:37.289"/>
+</kw>
+<kw name="Check Selected Filter" library="homePageActions">
+<arg>JBL</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='FacetList-content']//label[text()='${filterText}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:37.290" endtime="20211225 20:57:37.321"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:37.290" endtime="20211225 20:57:37.321"/>
+</kw>
+<kw name="Check Selected Filter" library="homePageActions">
+<arg>750 - 1000 TL</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='FacetList-content']//label[text()='${filterText}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:37.321" endtime="20211225 20:57:37.340"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:37.321" endtime="20211225 20:57:37.341"/>
+</kw>
+<kw name="Check Selected Filter" library="homePageActions">
+<arg>Siyah</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='FacetList-content']//label[text()='${filterText}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:37.341" endtime="20211225 20:57:38.577"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:37.341" endtime="20211225 20:57:38.578"/>
+</kw>
+<kw name="Click First Product In Search" library="homePageActions">
+<kw name="Wait And Click" library="baseTest">
+<arg>${firstProduct_Lnk}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:38.579" endtime="20211225 20:57:38.600"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:38.601" level="INFO">Clicking element 'xpath:(//div[contains(@class, 'ProductCard')]//a)[1]'.</msg>
+<status status="PASS" starttime="20211225 20:57:38.600" endtime="20211225 20:57:39.052"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:38.578" endtime="20211225 20:57:39.053"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:38.578" endtime="20211225 20:57:39.053"/>
+</kw>
+<kw name="Check Product Page Is Loaded" library="productPageActions">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20211225 20:57:39.070" level="INFO">${handles} = ['CDwindow-0C088121578C58840468D76158D3B3C6', 'CDwindow-BB79F80D84778E56A89C84A79E665B37']</msg>
+<status status="PASS" starttime="20211225 20:57:39.053" endtime="20211225 20:57:39.070"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20211225 20:57:39.070" endtime="20211225 20:57:39.185"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addToCart_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:39.185" endtime="20211225 20:57:42.817"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${addToCart_Btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:42.829" level="INFO">Current page contains element 'id:addToCart'.</msg>
+<status status="PASS" starttime="20211225 20:57:42.817" endtime="20211225 20:57:42.829"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:39.053" endtime="20211225 20:57:42.829"/>
+</kw>
+<kw name="Click To Add Basket Button" library="productPageActions">
+<kw name="Wait And Click" library="baseTest">
+<arg>${addToCart_Btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:42.830" endtime="20211225 20:57:42.860"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:42.860" level="INFO">Clicking element 'id:addToCart'.</msg>
+<status status="PASS" starttime="20211225 20:57:42.860" endtime="20211225 20:57:43.073"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:42.829" endtime="20211225 20:57:43.073"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:42.829" endtime="20211225 20:57:43.074"/>
+</kw>
+<kw name="Click To Go To Basket Button" library="productPageActions">
+<kw name="Wait And Click" library="baseTest">
+<arg>${goToCart_Btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:43.076" endtime="20211225 20:57:45.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211225 20:57:45.887" level="INFO">Clicking element 'xpath://button[text()='Sepete git']'.</msg>
+<status status="PASS" starttime="20211225 20:57:45.886" endtime="20211225 20:57:46.629"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:43.074" endtime="20211225 20:57:46.629"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:43.074" endtime="20211225 20:57:46.629"/>
+</kw>
+<kw name="Check Basket Page Open" library="basketPageActions">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${basketPage_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211225 20:57:46.630" endtime="20211225 20:57:47.024"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${basketPage_Title}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211225 20:57:47.181" level="INFO">Current page contains element 'xpath://h1[text()='Sepetim']'.</msg>
+<status status="PASS" starttime="20211225 20:57:47.024" endtime="20211225 20:57:47.181"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:46.630" endtime="20211225 20:57:47.181"/>
+</kw>
+<kw name="Test Case TearDown" library="baseTest" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211225 20:57:47.460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211225 20:57:47.182" endtime="20211225 20:57:47.460"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211225 20:57:49.462" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211225 20:57:47.460" endtime="20211225 20:57:49.462"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211225 20:57:49.462" endtime="20211225 20:57:49.846"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:47.181" endtime="20211225 20:57:49.847"/>
+</kw>
+<status status="PASS" starttime="20211225 20:57:11.682" endtime="20211225 20:57:49.847"/>
+</test>
+<status status="PASS" starttime="20211225 20:57:11.285" endtime="20211225 20:57:49.848"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testCase1">testCase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
