@@ -3,7 +3,7 @@
 ## Test Koşumu
 
 vscode terminal üzerinden 
-python3 -m robot -d Output Tests/testCase1.robot
+python3 -m robot -d Output TestCases/testCase1.robot
 komutu çalıştırılır
 
 ## POM
